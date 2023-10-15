@@ -104,7 +104,6 @@ namespace _03LaboratoryExercise_Austria
             this.txtStudentNo.Name = "txtStudentNo";
             this.txtStudentNo.Size = new System.Drawing.Size(231, 23);
             this.txtStudentNo.TabIndex = 5;
-            this.txtStudentNo.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // txtLastName
             // 
@@ -200,6 +199,9 @@ namespace _03LaboratoryExercise_Austria
             // cbGender
             // 
             this.cbGender.FormattingEnabled = true;
+            this.cbGender.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
             this.cbGender.Location = new System.Drawing.Point(468, 162);
             this.cbGender.Name = "cbGender";
             this.cbGender.Size = new System.Drawing.Size(183, 23);
@@ -222,6 +224,7 @@ namespace _03LaboratoryExercise_Austria
             this.btnRegister.TabIndex = 19;
             this.btnRegister.Text = "Register";
             this.btnRegister.UseVisualStyleBackColor = false;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // FrmRegistration
             // 
@@ -251,6 +254,7 @@ namespace _03LaboratoryExercise_Austria
             this.Controls.Add(this.label1);
             this.Name = "FrmRegistration";
             this.Text = "OrganizationProfile";
+            this.Load += new System.EventHandler(this.FrmRegistration_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
